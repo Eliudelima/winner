@@ -16,6 +16,8 @@ public class Professor {
 	
 	private String nome;
 	
+	private String horarioDisciplina;
+	
 	@OneToMany
 	private List<Disciplina> disciplinas;
 
@@ -43,6 +45,14 @@ public class Professor {
 
 	public Professor() {
 		
+	}
+
+	public String getHorarioDisciplina() {
+		return horarioDisciplina;
+	}
+
+	public void setHorarioDisciplina(String horarioDisciplina) {
+		this.horarioDisciplina = horarioDisciplina;
 	}
 	
 	

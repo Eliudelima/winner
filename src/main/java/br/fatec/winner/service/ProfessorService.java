@@ -6,38 +6,38 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.fatec.winner.model.Aluno;
 
-import br.fatec.winner.repository.AlunoRepository;
+import br.fatec.winner.model.Professor;
 
+import br.fatec.winner.repository.ProfessorRepository;
 
 @Service
-public class AlunoService implements ServiceInterface<Aluno> {
+public class ProfessorService implements ServiceInterface <Professor> {
 
 	@Autowired
-	private AlunoRepository repository;
+	private ProfessorRepository repository;
 
 	@Override
-	public Aluno create(Aluno obj) {
+	public Professor create(Professor obj) {
 		return repository.save(obj);
 
 	}
 
 	@Override
-	public Aluno findById(Long id) {
-		Optional<Aluno> obj = repository.findById(id);
+	public Professor findById(Long id) {
+		Optional<Professor> obj = repository.findById(id);
 		return obj.orElse(null);
 
 	}
 
 	@Override
-	public List<Aluno> findAll() {
+	public List<Professor> findAll() {
 
 		return repository.findAll();
 	}
 
 	@Override
-	public boolean update(Aluno obj) {
+	public boolean update(Professor obj) {
 		if (repository.existsById(obj.getId())) {
 			repository.save(obj);
 			return true;
@@ -53,5 +53,6 @@ public class AlunoService implements ServiceInterface<Aluno> {
 		}
 		return false;
 	}
-
+	
+	
 }

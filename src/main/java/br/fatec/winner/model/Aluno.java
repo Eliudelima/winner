@@ -12,6 +12,8 @@ public class Aluno {
 	private Long id;
 	
 	private String nome;
+	
+	private String notaDisciplina;
 
 	public Long getId() {
 		return id;
@@ -37,5 +39,13 @@ public class Aluno {
 
 	public Aluno() {
 		
+	}
+
+	public String getNotaDisciplina() {
+		return notaDisciplina;
+	}
+
+	public void setNotaDisciplina(String notaDisciplina) {
+		this.notaDisciplina = notaDisciplina;
 	}
 }

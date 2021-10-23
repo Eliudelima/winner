@@ -18,7 +18,7 @@ import br.fatec.winner.model.Aluno;
 import br.fatec.winner.service.AlunoService;
 
 @RestController
-@RequestMapping("/Alunos")
+@RequestMapping("/alunos")
 public class AlunoController implements ControllerInterface<Aluno> {
 	
 	@Autowired

@@ -18,7 +18,7 @@ import br.fatec.winner.model.Professor;
 import br.fatec.winner.service.ProfessorService;
 
 @RestController
-@RequestMapping("/Professors")
+@RequestMapping("/professors")
 public class ProfessorController implements ControllerInterface<Professor> {
 	
 	@Autowired

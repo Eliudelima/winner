@@ -1,12 +1,12 @@
 package br.fatec.winner.model;
 
-import java.util.List;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class Professor {
@@ -16,11 +16,9 @@ public class Professor {
 	
 	private String nome;
 	
-	private String horarioDisciplina;
 	
-	@OneToMany
-	private List<Disciplina> disciplinas;
-
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -47,13 +45,7 @@ public class Professor {
 		
 	}
 
-	public String getHorarioDisciplina() {
-		return horarioDisciplina;
-	}
 
-	public void setHorarioDisciplina(String horarioDisciplina) {
-		this.horarioDisciplina = horarioDisciplina;
-	}
 	
 	
 }

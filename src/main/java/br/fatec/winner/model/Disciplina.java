@@ -1,12 +1,13 @@
 package br.fatec.winner.model;
 
-import java.util.List;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Disciplina {
@@ -17,17 +18,12 @@ public class Disciplina {
 	
 	private String disciplina;
 	
-	@ManyToMany 
-	private List<Aluno> alunos;
+	private Double nota;
+	
+	@ManyToOne
+	private Professor professor;
 
-	public List<Aluno> getAlunos() {
-		return alunos;
-	}
-
-	public void setAlunos(List<Aluno> alunos) {
-		this.alunos = alunos;
-	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -51,6 +47,22 @@ public class Disciplina {
 	}
 	public Disciplina() {
 		
+	}
+
+	public Professor getProfessor() {
+		return professor;
+	}
+
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+
+	public Double getNota() {
+		return nota;
+	}
+
+	public void setNota(Double nota) {
+		this.nota = nota;
 	}
 
 }

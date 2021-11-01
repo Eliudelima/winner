@@ -18,7 +18,7 @@ public class Disciplina {
 	
 	private String disciplina;
 	
-	private Double nota;
+
 	
 	@ManyToOne
 	private Professor professor;
@@ -57,12 +57,6 @@ public class Disciplina {
 		this.professor = professor;
 	}
 
-	public Double getNota() {
-		return nota;
-	}
-
-	public void setNota(Double nota) {
-		this.nota = nota;
-	}
+	
 
 }

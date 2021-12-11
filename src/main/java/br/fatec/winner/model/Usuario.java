@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Usuario implements UserDetails{
 
@@ -53,7 +55,7 @@ public class Usuario implements UserDetails{
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
-
+    @JsonIgnore
     public String getSenha() {
         return senha;
     }
@@ -69,6 +71,7 @@ public class Usuario implements UserDetails{
     }
 
     @Override
+    @JsonIgnore
     public String getPassword() {
         // TODO Auto-generated method stub
         return this.senha;
